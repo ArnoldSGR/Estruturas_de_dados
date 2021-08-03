@@ -1,25 +1,22 @@
-
 package tadlista;
 
+public class NoLDE {
 
-public class NoLDE implements Position {
-    NoLDE head;
-    NoLDE  tail;
-    Object info;
-   
-    public NoLDE(NoLDE head, NoLDE tail, Object info){
-        this.head = head;
-        this.tail = tail;
-        this.info = info;
+    private NoLDE head;
+    private NoLDE tail;
+    private Object info;
+
+    public NoLDE() {
+        this.head = null;
+        this.tail = null;
     }
-    
-    public Object info() throws InvalidPositionException{
-        if((head == null) && (tail == null)){
-            throw new InvalidPositionException("Posição Inválida!");
-        }
-        return info;
+
+    public NoLDE(Object o) {
+        this.info = o;
+        this.head = null;
+        this.tail = null;
     }
-    
+
     public Object getInfo() {
         return info;
     }
@@ -43,5 +40,5 @@ public class NoLDE implements Position {
     public void setProximo(NoLDE proximo) {
         this.tail = proximo;
     }
-    
+
 }

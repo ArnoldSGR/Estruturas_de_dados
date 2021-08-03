@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tadlista;
 
-/**
- *
- * @author Arnold
- */
 public class TADLista {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws LDEException {
+        ListaDE lista = new ListaDE();
+        lista.insertFirst("primeira");
+        lista.insertLast("segunda");
+        lista.insertLast("terceira");
+        lista.insertLast("quarta");
+        lista.print();
     }
     
 }
